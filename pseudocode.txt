@@ -16,11 +16,13 @@ WHILE "loop1"
         STORE "loop2" OF false
       ELSE
         DISPLAY "Any Message"
+      END IF
 
     DISPLAY "keranjang"
     WRITE "checkout" OF BOOLEAN
     IF "checkout" IS true
       WRITE "loop1" OF false
+    END IF
 
 WRITE "pembayaran" WITH COUNT SUM "keranjang"
 STORE "loop3" AS BOOLEAN OF true
@@ -35,3 +37,4 @@ WHILE "loop3"
       WRITE "loop2" OF false
     ELSE
       DISPLAY "Any Message"
+    END IF

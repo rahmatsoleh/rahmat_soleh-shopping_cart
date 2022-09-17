@@ -1,0 +1,14 @@
+Berikut Merupakan algoritma untuk aplikasi Shopping Chart Sederhana
+
+1. Mulai
+2. Tampilkan list barang
+3. Masukan barang sesuai barang yang tersedia
+4. Jika barang tersedia, masukan barang kedalam keranjang
+5. Jika barang tidak tersedia, tampilkan pesan kesalahan
+6. Tampilkan barang yang sudah dimasukan kedalam keranjang
+7. Jika tidak chekcout maka kembali ke langkah nomor 2
+8. Jika chekcout maka hitung total barang dan harga barang
+9. Input pembayaran
+10. Jika pembayaran kurang maka tampilkan pesan kesalahan dan kembali ke langkah nomor 9
+11. Jika pembayaran lunas maka cetak bukti pembayaran
+12. Selesai.

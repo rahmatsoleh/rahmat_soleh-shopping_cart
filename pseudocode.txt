@@ -1,0 +1,2 @@
+STORE "data_produk" AS ARRAY OF [{id, nama_produk, harga}]
+STORE "keranjang" AS ARRAY OF []

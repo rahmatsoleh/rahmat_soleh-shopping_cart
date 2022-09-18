@@ -33,8 +33,10 @@ WHILE "loop3"
     DISPLAY "pembayaran"
     WRITE "pay" WITH NUMBER
     IF "pay" >= "pembayaran"
-      DISPLAY REPORT
       WRITE "loop2" OF false
     ELSE
       DISPLAY "Any Message"
     END IF
+
+PROCESS "pay" - "pembayaran"
+DISPLAY REPORT

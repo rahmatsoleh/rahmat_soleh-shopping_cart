@@ -1,0 +1,42 @@
+STORE "data_produk" AS ARRAY OF [{id, nama_produk, harga}]
+STORE "keranjang" AS ARRAY OF []
+STORE "pembayaran" OF NUMBER
+
+STORE "loop1" AS BOOLEAN OF true
+
+WHILE "loop1"
+  DO
+    STORE "loop2" AS BOOLEAN OF true
+    WHILE "loop2"
+    DO
+      DISPLAY "data_produk"
+      WRITE "data_produk" WITH "nama_produk"
+      IF "nama_produk" IS VALID
+        INSERT INTO "keranjang"
+        STORE "loop2" OF false
+      ELSE
+        DISPLAY "Any Message"
+      END IF
+
+    DISPLAY "keranjang"
+    WRITE "checkout" OF BOOLEAN
+    IF "checkout" IS true
+      WRITE "loop1" OF false
+    END IF
+
+WRITE "pembayaran" WITH COUNT SUM "keranjang"
+STORE "loop3" AS BOOLEAN OF true
+STORE "pay" AS NUMBER
+
+WHILE "loop3"
+  DO
+    DISPLAY "pembayaran"
+    WRITE "pay" WITH NUMBER
+    IF "pay" >= "pembayaran"
+      WRITE "loop2" OF false
+    ELSE
+      DISPLAY "Any Message"
+    END IF
+
+PROCESS "pay" - "pembayaran"
+DISPLAY REPORT
